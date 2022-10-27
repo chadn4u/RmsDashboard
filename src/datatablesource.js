@@ -1,15 +1,25 @@
 
 export const userColumns = [
-    { field: "id", headerName: "ID", width: 70 },
+    { field: "id", headerName: "ID", width: 70,
+    headerClassName: 'headerGrid',renderCell: (params) => {
+      return (
+        <div className={`cellWithText ${params.row.id}`}>
+          {params.row.id}
+        </div>
+      );
+    }},
     {
       field: "user",
       headerName: "User",
       width: 230,
+      headerClassName: 'headerGrid',
       renderCell: (params) => {
         return (
           <div className="cellWithImg">
             <img className="cellImg" src={params.row.img} alt="avatar" />
+            <div className={`cellWithText ${params.row.username}`}>
             {params.row.username}
+              </div>
           </div>
         );
       },
@@ -18,17 +28,34 @@ export const userColumns = [
       field: "email",
       headerName: "Email",
       width: 230,
+      headerClassName: 'headerGrid',
+      renderCell: (params) => {
+        return (
+          <div className={`cellWithText ${params.row.email}`}>
+            {params.row.email}
+          </div>
+        );
+      }
     },
   
     {
       field: "age",
       headerName: "Age",
       width: 100,
+      headerClassName: 'headerGrid',
+      renderCell: (params) => {
+        return (
+          <div className={`cellWithText ${params.row.age}`}>
+            {params.row.age}
+          </div>
+        );
+      }
     },
     {
       field: "status",
       headerName: "Status",
       width: 160,
+      headerClassName: 'headerGrid',
       renderCell: (params) => {
         return (
           <div className={`cellWithStatus ${params.row.status}`}>

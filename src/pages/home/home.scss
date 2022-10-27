@@ -1,28 +1,15 @@
-.home{
-    display: flex;
-    .homeContainer{
-        flex: 6;
+@import 'src/bootstrap/bootstrap';
+@import 'src/bootstrap/variables';
+@import 'src/bootstrap/mixins';
 
-        .widgets,.charts{
-            display: flex;
-            padding: 20px;
-            gap: 20px;
-        }
+$font-primary: 'Lato',Arial, sans-serif;
+$primary: #FF676C;
 
-        .charts{
-            padding: 5px 20px;
-        }
-        .listContainer {
-            -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
-            box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
-            padding: 20px;
-            margin: 20px;
-      
-            .listTitle {
-              font-weight: 500;
-              color: gray;
-              margin-bottom: 15px;
-            }
-          }
-    }
+.js-fullheight{
+    background: url("http://localhost:3000/bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+	
 }
